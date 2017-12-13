@@ -2,15 +2,19 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AGloginPage } from '../pages/a-glogin/a-glogin';
-import { AGregisterPage } from '../pages/a-gregister/a-gregister';
-import { AGcoordinadorPage } from '../pages/a-gcoordinador/a-gcoordinador';
-import { AGdocentePage } from '../pages/a-gdocente/a-gdocente';
-import { AGestudiantePage } from '../pages/a-gestudiante/a-gestudiante';
-import { AGadmingroupCPage } from '../pages/a-gadmingroup-c/a-gadmingroup-c';
-import { AGadmingroupDPage } from '../pages/a-gadmingroup-d/a-gadmingroup-d';
-import { AGgroupDPage } from '../pages/a-ggroup-d/a-ggroup-d';
-import { AGgroupEPage } from '../pages/a-ggroup-e/a-ggroup-e';
+import { HomeEstudiantePage } from '../pages/home-estudiante/home-estudiante';
+import { HomeDocentePage } from '../pages/home-docente/home-docente';
+import { HomeCoordinadorPage } from '../pages/home-coordinador/home-coordinador';
+import { CrearGrupoPage } from '../pages/crear-grupo/crear-grupo';
+import { SettingsPage } from '../pages/settings/settings';
+import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+import { LoginPage } from '../pages/login/login';
+import { RecordarPasswordPage } from '../pages/recordar-password/recordar-password';
+import { RegisterPage } from '../pages/register/register';
+import { GrupoCoordinadorAdminPage } from '../pages/grupo-coordinador-admin/grupo-coordinador-admin';
+import { GrupoDocenteUsuarioPage } from '../pages/grupo-docente-usuario/grupo-docente-usuario';
+import { GrupoEstudiantePage } from '../pages/grupo-estudiante/grupo-estudiante';
+import { GrupoDocenteAdminPage } from '../pages/grupo-docente-admin/grupo-docente-admin';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,15 +23,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AGloginPage,
-    AGregisterPage,
-    AGcoordinadorPage,
-    AGdocentePage,
-    AGestudiantePage,
-    AGadmingroupCPage,
-    AGadmingroupDPage,
-    AGgroupDPage,
-    AGgroupEPage
+    HomeEstudiantePage,
+    HomeDocentePage,
+    HomeCoordinadorPage,
+    CrearGrupoPage,
+    SettingsPage,
+    TabsControllerPage,
+    LoginPage,
+    RecordarPasswordPage,
+    RegisterPage,
+    GrupoCoordinadorAdminPage,
+    GrupoDocenteUsuarioPage,
+    GrupoEstudiantePage,
+    GrupoDocenteAdminPage
   ],
   imports: [
     BrowserModule,
@@ -36,15 +44,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AGloginPage,
-    AGregisterPage,
-    AGcoordinadorPage,
-    AGdocentePage,
-    AGestudiantePage,
-    AGadmingroupCPage,
-    AGadmingroupDPage,
-    AGgroupDPage,
-    AGgroupEPage
+    HomeEstudiantePage,
+    HomeDocentePage,
+    HomeCoordinadorPage,
+    CrearGrupoPage,
+    SettingsPage,
+    TabsControllerPage,
+    LoginPage,
+    RecordarPasswordPage,
+    RegisterPage,
+    GrupoCoordinadorAdminPage,
+    GrupoDocenteUsuarioPage,
+    GrupoEstudiantePage,
+    GrupoDocenteAdminPage
   ],
   providers: [
     StatusBar,

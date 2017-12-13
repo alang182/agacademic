@@ -1,0 +1,32 @@
+<ion-content id="page5" text-center>
+  <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+    <form id="login-form1">
+      <!-- <ion-item id="login-input1"> -->
+        <!-- <ion-label>
+          User:
+        </ion-label> -->
+        <ion-input type="text" placeholder="Usuario" name="user" style="margin: 10% 10% 3% 10%; border:solid 2px #0089cf; border-radius: 7px; padding-left: 10px; width: 80%;"></ion-input>
+        <ion-input type="text" placeholder="Contraseña" name="password" style="margin: 3% 10% 10% 10%; border:solid 2px #0089cf; border-radius: 7px; padding-left: 10px; width: 80%;"></ion-input>
+      <!-- </ion-item> -->
+    </form>
+
+        <!-- <form id="login-form2">
+          <ion-item id="login-input2"> 
+            <ion-label>
+              Password:
+            </ion-label> 
+            <ion-input type="text" placeholder="Contraseña" name="password" style="margin: 3% 10% 10% 10%; border:solid 2px #0089cf; border-radius: 7px; padding-left: 10px; width: 80%;"></ion-input>
+          </ion-item> 
+        </form> -->
+        
+        <button id="login-button1" ion-button color="agblue" on-click="goToApp()">
+          Ingresar
+        </button>     
+        <button id="login-button4" ion-button color="white" block on-click="goToRecordarPassword()">
+          ¿Olvidaste tus datos de acceso?
+        </button>
+        <!-- <div class="spacer" style="width:320px;height:161px;" id="login-spacer1"></div> -->
+        <button id="login-button2" ion-button color="agblue" on-click="goToRegister()" block style="position: fixed; bottom:0; border-radius: 0px;">
+          Regístrate
+        </button>
+</ion-content>
