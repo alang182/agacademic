@@ -1,0 +1,53 @@
+{
+  "eventos" : {
+    "asignatura" : {
+      "mes" : {
+        "asunto" : {
+          "asunto" : "",
+          "fecha" : "",
+          "horaFin" : "",
+          "horaInicio" : ""
+        }
+      }
+    },   
+  "gruposCoordinacion" : {
+    "asignatura" : {
+      "nombre" : ""
+    },   
+  },
+  "gruposDocencia" : {
+    "asignatura" : {
+      "miembros" : {
+        "nombre" : {
+          "nombre" : ""
+        },
+      },
+    }
+  },
+  "horarios" : {
+    "asignatura" : {
+      "enlaceHorario" : ""
+    },
+  },
+  "informacionUsuario" : {
+    "nombre" : {
+      "correo" : "",
+      "movil" : "",
+      "programa" : "",
+      "rol" : ""
+    },     
+  },
+  "mensajes" : {
+    "asignatura" : {
+      "asunto" : {
+        "asunto" : "",
+        "mensaje" : ""
+      },     
+    },    
+  },
+  "usuarios" : {
+    "nombre" : {
+      "nombre" : ""
+    }  
+  } 
+
