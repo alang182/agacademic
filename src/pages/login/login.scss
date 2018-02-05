@@ -1,5 +1,30 @@
 page-login {
 
+   
+
+    .inputUser{
+        margin: 10% 10% 3% 10%; 
+        border:solid 2px #0089cf;
+        border-radius: 7px; 
+        padding-left: 10px; 
+        width: 80%;
+    }
+
+    .inputPass{
+    margin: 3% 10% 10% 10%; 
+    border:solid 2px #0089cf;
+     border-radius: 7px; 
+     padding-left: 10px; 
+     width: 80%;
+    }
+
+    .registrar{
+        
+        position: fixed; 
+        bottom:0;
+         border-radius: 0px;
+    }
+
 }
 
 

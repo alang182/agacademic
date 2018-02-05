@@ -1,21 +1,22 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      GrupoDocenteAdmin
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar>
+      <ion-title>
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only class="add" (click)="goToAddUser()">
+          add user
+          <ion-icon name="add-circle"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
 <ion-content id="page14">
-  <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-  <div id="grupoDocenteAdmin-markdown20" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Nombre del Grupo
-    </p>
-  </div>
-  <button id="grupoDocenteAdmin-button16" ion-button color="positive" block>
+  <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" /> 
+<ion-input text-center type="text" value="" [(ngModel)]="grupo.nombre" class="nombreGrupo"></ion-input>
+ <button id="grupoDocenteAdmin-button16" ion-button color="agblue" block on-click="goToCalendar()">
     Calendario
   </button>
-  <button id="grupoDocenteAdmin-button17" ion-button color="positive" block>
+  <button id="grupoDocenteAdmin-button17" ion-button color="agblue" block on-click="msg(grupo.nombre)">
     Dejar Mensaje
   </button>
   <div id="grupoDocenteAdmin-markdown15" class="show-list-numbers-and-dots">
@@ -23,4 +24,11 @@
       Listado de mensajes:
     </p>
   </div>
+  <ion-card>    
+    <ion-list *ngIf="hayMensajes">
+        <button ion-item *ngFor="let item of mensajes" (click)="verDetalle(item.asunto)">
+          {{ item.asunto }}
+        </button>         
+      </ion-list>
+</ion-card>
 </ion-content>

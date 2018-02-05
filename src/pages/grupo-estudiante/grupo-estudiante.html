@@ -1,18 +1,11 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      GrupoEstudiante
-    </ion-title>
+  <ion-navbar>    
   </ion-navbar>
 </ion-header>
 <ion-content id="page15">
-  <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-  <div id="grupoEstudiante-markdown17" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Nombre del grupo
-    </p>
-  </div>
-  <button id="grupoEstudiante-button19" ion-button color="positive" block>
+  <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" /> 
+  <ion-input text-center type="text" value="" [(ngModel)]="grupo.nombre" class="nombreGrupo"></ion-input>
+  <button id="grupoEstudiante-button19" ion-button color="agblue" block on-click="goToCalendar()">
     Calendario
   </button>
   <div id="grupoEstudiante-markdown16" class="show-list-numbers-and-dots">

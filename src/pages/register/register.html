@@ -7,43 +7,64 @@
 </ion-header>
 <ion-content id="page6">
   <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+
+<!-- Formulario de registro -->
   <div id="register-container2">
     <form id="register-form5">
       <ion-item id="register-input3">
         <ion-label>
           Nombre:
         </ion-label>
-        <ion-input type="text" placeholder="ej: Alan Guarnizo"></ion-input>
+        <ion-input type="text"
+        [(ngModel)]="user.name"
+        name="name" 
+        ></ion-input>
       </ion-item>
-    </form>
+      <ion-item id="register-input4">
+        <ion-label>
+          Programa:
+        </ion-label>
+        <ion-input type="text" placeholder="ej: Ingeniería de Sistemas"
+        [(ngModel)]="user.programa"
+        name="programa" 
+        ></ion-input>
+      </ion-item>
+      <ion-item id="register-input5">
+        <ion-label>
+          Correo:
+        </ion-label>
+        <ion-input         
+        [(ngModel)]="user.email" 
+          name="email" 
+          type="text" 
+          autocapitalize="off" 
+          required>
+        </ion-input>
+      </ion-item>
+      <ion-item id="register-input6">
+        <ion-label>
+          Móvil:
+        </ion-label>
+        <ion-input type="text"
+        [(ngModel)]="user.movil"
+        name="movil" 
+        ></ion-input>
+      </ion-item>
+      <ion-item id="register-input7">
+        <ion-label>
+          Contraseña:
+        </ion-label>
+        <ion-input 
+        [(ngModel)]="user.password" 
+          name="password" 
+          type="password" 
+          required>
+        </ion-input>
+      </ion-item>
+      <button id="register-button3" type="submit" ion-button color="positive" block (click)="signin()">
+          Registrarme
+      </button>
+    </form>    
   </div>
-  <form id="register-form6">
-    <ion-item id="register-input4">
-      <ion-label>
-        Programa:
-      </ion-label>
-      <ion-input type="text" placeholder="ej: Ingeniería de Sistemas"></ion-input>
-    </ion-item>
-    <ion-item id="register-input5">
-      <ion-label>
-        Correo:
-      </ion-label>
-      <ion-input type="text" placeholder="ej: academic@gmail.com"></ion-input>
-    </ion-item>
-    <ion-item id="register-input6">
-      <ion-label>
-        Móvil:
-      </ion-label>
-      <ion-input type="text" placeholder="ej:3121234567"></ion-input>
-    </ion-item>
-    <ion-item id="register-input7">
-      <ion-label>
-        Contraseña:
-      </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
-    </ion-item>
-  </form>
-  <button id="register-button3" ion-button color="positive" block>
-    Registrarme
-  </button>
+<!-- Formulario de registro -->
 </ion-content>

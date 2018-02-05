@@ -1,21 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      GrupoDocenteUsuario
-    </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content id="page13">
-  <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-  <div id="grupoDocenteUsuario-markdown19" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Nombre del Grupo
-    </p>
-  </div>
-  <button id="grupoDocenteUsuario-button9" ion-button color="positive" block>
+  <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" /> 
+  <ion-input text-center type="text" value="" [(ngModel)]="grupo.nombre" class="nombreGrupo"></ion-input>
+  <button id="grupoDocenteUsuario-button9" ion-button color="agblue" block on-click="abrirEnlace()">
     Horario
   </button>
-  <button id="grupoDocenteUsuario-button10" ion-button color="positive" block>
+  <button id="grupoDocenteUsuario-button10" ion-button color="agblue" block on-click="verCalendario()">
     Calendario
   </button>
   <div id="grupoDocenteUsuario-markdown13" class="show-list-numbers-and-dots">
@@ -23,4 +16,12 @@
       Mensajes:
     </p>
   </div>
+  <ion-card>    
+      <ion-list *ngIf="hayMensajes">
+          <button ion-item *ngFor="let item of mensajes" (click)="verDetalle(item.asunto)">
+            {{ item.asunto }}
+          </button>  
+        
+        </ion-list>
+  </ion-card>
 </ion-content>

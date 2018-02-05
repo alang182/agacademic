@@ -1,8 +1,21 @@
-<ion-content id="page2">
+<ion-content id="page2" text-center>
   <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-  <div id="homeEstudiante-markdown10" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Grupos a los que pertenece
-    </p>
-  </div>
+
+  <button class="separador" ion-button full color="agblue" icon-left (click)="verGrupos()">
+    <ion-icon ></ion-icon> Grupos a los que pertenece
+  </button>
+  <ion-card >
+      <ion-item *ngIf="noPerteneceAgrupo">
+          <p class="parrafo">
+              No perteneces a ningún grupo
+          </p>
+      </ion-item>
+  </ion-card>
+   <ion-card>    
+      <ion-list *ngIf="perteneceAgrupo">
+          <button ion-item *ngFor="let item of gruposEstudiante" (click)="verDetalle(item.nombre)">
+            {{ item.nombre }}
+          </button>  
+        </ion-list>
+  </ion-card>
 </ion-content>

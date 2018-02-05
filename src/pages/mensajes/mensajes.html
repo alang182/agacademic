@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>mensajes</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content >
+    <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+      <ion-item id="crearGrupo-input10" >
+        <ion-label> Asunto </ion-label>
+        <ion-input type="text"
+        [(ngModel)]="mensaje.asunto" ></ion-input>
+      </ion-item>
+    <ion-item>Ingrese el mensaje a enviar:</ion-item>
+    
+    <ion-item class="msgBox"><ion-textarea type="text"
+      [(ngModel)]="mensaje.contenido"></ion-textarea></ion-item>
+    <button id="grupoCoordinadorAdmin-button8" ion-button color="agblue" block on-click="enviarMensaje()">
+        Enviar
+      </button>
+</ion-content>

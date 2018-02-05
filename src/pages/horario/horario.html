@@ -1,0 +1,18 @@
+<ion-header >
+    <ion-navbar>
+      <ion-title>
+      Horario
+      </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content id="page9" text-center>
+    <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+        <p class="titulo">Ingrese el enlace del documento</p>
+          <ion-item class="msgBox"><ion-textarea type="text" [(ngModel)]="horario.enlace" ></ion-textarea></ion-item>
+          <button type="submit" id="login-button1" ion-button color="agblue" (click)="guardarEnlace()">
+              Guardar
+         </button> 
+    <button *ngIf="hayHorario" id="register-button3" type="submit" ion-button color="agblue" on-click="abrirEnlace()">
+        Ver Horario
+    </button>
+</ion-content>

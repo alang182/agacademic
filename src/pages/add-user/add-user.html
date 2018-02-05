@@ -1,0 +1,26 @@
+<ion-header >
+    <ion-navbar>
+      <ion-title>      
+      </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content id="page9" text-center>
+    <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+
+    <p class="titulo">
+       Seleccionar estudiantes
+    </p>
+
+    <form>
+            <ion-card>                
+                <ion-list *ngIf="listadoEstudiantes">
+                    <ion-item ion-item *ngFor="let item of estudiantes" >
+                        <ion-label> {{item.nombre }}</ion-label>                          
+                        <ion-checkbox  color="secondary" (click)="addUser(item.nombre)"></ion-checkbox>                       
+                    </ion-item>   
+                  </ion-list>
+                  <button ion-button type="submit" block ion-button color="agblue" (click)="addUserOk()">Agregar</button>                  
+            </ion-card>
+    </form>
+       
+</ion-content>

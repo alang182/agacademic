@@ -1,17 +1,45 @@
-<ion-content id="page12">
+<ion-content id="page12" text-center>
   <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-  <button id="homeDocente-button13" ion-button color="positive" block on-click="goToCrearGrupo()">
-    <ion-icon name="people"></ion-icon>
-    Crear Grupo
-  </button>
-  <div id="homeDocente-markdown11" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
+  <div id="homeDocente-markdown11" class="separador">
+    <p>
       Grupos a los que pertenece
     </p>
   </div>
-  <div id="homeDocente-markdown12" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
+  <ion-card >
+      <ion-item *ngIf="noPerteneceAgrupo">
+          <p class="parrafo">
+              No perteneces a ningún grupo aún
+          </p>
+      </ion-item>
+  </ion-card>
+  <ion-card>    
+      <ion-list *ngIf="perteneceAgrupo">
+          <button ion-item *ngFor="let item of gruposPertenece" (click)="verDetalle(item.nombre)">
+            {{ item.nombre }}
+          </button>  
+        </ion-list>
+  </ion-card>
+  <button id="homeDocente-button13" ion-button color="agblue" on-click="goToCrearGrupo()" class="button">
+    <ion-icon name="md-people" class="icono"></ion-icon>
+  Crear Grupo
+</button>
+  <div id="homeDocente-markdown12" class="separador">
+    <p>
       Grupos creados
     </p>
   </div>
+  <ion-card>
+      <ion-item *ngIf="sinGruposCreados">
+          <p class="parrafo">
+              No has creado ningún grupo 
+          </p>
+      </ion-item>
+  </ion-card>
+  <ion-card>    
+        <ion-list *ngIf="conGruposCreados">
+            <button ion-item *ngFor="let item of gruposCreados" (click)="seleccionarGrupoCreado(item.nombre)">
+              {{ item.nombre }}
+            </button>  
+          </ion-list>
+    </ion-card>
 </ion-content>

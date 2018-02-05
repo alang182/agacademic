@@ -1,46 +1,18 @@
 <ion-content id="page10">
   <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
   <form id="crearGrupo-form10">
-    <div id="crearGrupo-markdown5" class="show-list-numbers-and-dots">
-      <p style="color:#000000;">
-        Ingrese el nombre del grupo:
-      </p>
-    </div>
-    <ion-item id="crearGrupo-input10">
-      <ion-label>
-        Nombre:
-      </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
-    </ion-item>
-  </form>
-  <div id="crearGrupo-markdown7" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Seleccione los miembros del grupo:
-    </p>
-  </div>
-  <form id="crearGrupo-form11">
-    <ion-searchbar placeholder="" name="" id="crearGrupo-search2"></ion-searchbar>
-  </form>
-  <div id="crearGrupo-markdown8" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Seleccione su rol:
-    </p>
-  </div>
-  <form id="crearGrupo-form12">
-    <ion-item id="crearGrupo-toggle4">
-      <ion-label>
-        Docentes
-      </ion-label>
-      <ion-toggle color="positive" checked="false"></ion-toggle>
-    </ion-item>
-    <ion-item id="crearGrupo-toggle5">
-      <ion-label>
-        Estudiantes
-      </ion-label>
-      <ion-toggle color="positive" checked="false"></ion-toggle>
-    </ion-item>
-  </form>
-  <button id="crearGrupo-button11" ion-button color="positive" block>
-    Crear
-  </button>
+        <p class="titulo">
+          Ingrese el nombre del grupo:
+        </p>   
+        <ion-item id="crearGrupo-input10" >
+          <ion-label> Nombre: </ion-label>
+          <ion-input type="text"
+          [(ngModel)]="groups.name"   
+          name="name"           
+          ></ion-input>
+        </ion-item>
+    <button id="crearGrupo-button11" ion-button color="agblue" block (click)="crearGrupo()">
+        Crear
+    </button>    
+  </form>  
 </ion-content>

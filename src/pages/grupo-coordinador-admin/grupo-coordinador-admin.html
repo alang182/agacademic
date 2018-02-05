@@ -1,24 +1,14 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      GrupoCoordinadorAdmin
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content id="page9">
+
+<ion-content id="page9" text-center>
   <img src="assets/img/head.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-  <div id="grupoCoordinadorAdmin-markdown18" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Nombre del Grupo
-    </p>
-  </div>
-  <button id="grupoCoordinadorAdmin-button6" ion-button color="positive" block>
+  <ion-input text-center type="text" value="" [(ngModel)]="grupo.nombre" class="nombreGrupo"></ion-input>
+  <button id="grupoCoordinadorAdmin-button6" ion-button color="agblue" block on-click="goToHorario()">
     Horario
   </button>
-  <button id="grupoCoordinadorAdmin-button7" ion-button color="positive" block>
+  <button id="grupoCoordinadorAdmin-button7" ion-button color="agblue" block on-click="goToCalendar()">
     Calendario
   </button>
-  <button id="grupoCoordinadorAdmin-button8" ion-button color="positive" block>
+  <button id="grupoCoordinadorAdmin-button8" ion-button color="agblue" block on-click="msg()">
     Dejar Mensaje
   </button>
   <div id="grupoCoordinadorAdmin-markdown14" class="show-list-numbers-and-dots">
@@ -26,4 +16,11 @@
       Listado de mensajes:
     </p>
   </div>
+  <ion-card>    
+      <ion-list *ngIf="hayMensajes">
+          <button ion-item *ngFor="let item of mensajes" (click)="verDetalle(item.asunto)">
+            {{ item.asunto }}
+          </button>         
+        </ion-list>
+  </ion-card>
 </ion-content>
